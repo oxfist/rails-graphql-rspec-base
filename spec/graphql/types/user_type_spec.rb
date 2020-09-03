@@ -24,6 +24,8 @@ RSpec.describe Types::QueryType, type: :request do
       expect(first_user.keys).to match_array(user_attributes)
     end
 
+    # TODO: Add test for single user query
+
     # TODO: Move to helper
     def run_graphql_query(query)
       post '/graphql', params: { query: query }
